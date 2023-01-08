@@ -13,7 +13,6 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-
   Timer? _timer;
 
   _startDelay() {
