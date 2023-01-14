@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:flutter_udemy/domain/model.dart';
+import 'package:flutter_udemy/domain/model/model.dart';
 import 'package:flutter_udemy/presentation/base/base_viewModel.dart';
 import 'package:flutter_udemy/presentation/resources/assets_manager.dart';
 import 'package:flutter_udemy/presentation/resources/strings_manager.dart';

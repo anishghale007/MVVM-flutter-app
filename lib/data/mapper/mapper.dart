@@ -1,5 +1,5 @@
 import 'package:flutter_udemy/data/responses/responses.dart';
-import 'package:flutter_udemy/domain/model.dart';
+import 'package:flutter_udemy/domain/model/model.dart';
 import 'package:flutter_udemy/app/extensions.dart';
 
 // to convert the response into a non nullable object (model)
