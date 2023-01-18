@@ -28,6 +28,7 @@ dependencies:
   pretty_dio_logger: ^1.1.1
   shared_preferences: ^2.0.16
   device_info_plus: ^8.0.0
+  freezed: ^2.3.2
 
 dev_dependencies:
   flutter_test:
@@ -56,6 +57,7 @@ flutter:
     - assets/images/solid_circle_ic.svg
     - assets/images/left_arrow_ic.svg
     - assets/images/right_arrow_ic.svg
+
 
 
   fonts:
