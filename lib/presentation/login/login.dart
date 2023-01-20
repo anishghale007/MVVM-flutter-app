@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_udemy/app/dependency_injection.dart';
+import 'package:flutter_udemy/data/data_source/remote_date_source.dart';
+import 'package:flutter_udemy/data/repository/repository_impl.dart';
 import 'package:flutter_udemy/presentation/login/login_viewmodel.dart';
 import 'package:flutter_udemy/presentation/resources/assets_manager.dart';
 import 'package:flutter_udemy/presentation/resources/color_manager.dart';
@@ -15,7 +17,8 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
-  LoginViewModel _viewModel = LoginViewModel(null);
+  
+  LoginViewModel _viewModel = instance<LoginViewModel>();
 
   TextEditingController _userNameController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
