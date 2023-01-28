@@ -20,6 +20,9 @@ class AppStrings {
   static const String passwordError = "Invalid Password";
   static const String login = "Login";
   static const String forgotPassword = "Forgot Password";
-  static const String register = "Not a member? Sign Up";
+  static const String register = "Register Here";
+  static const String loading = "Loading...";
+  static const String retryAgain = "Retry Again";
+  static const String ok = "Ok";
 
 }

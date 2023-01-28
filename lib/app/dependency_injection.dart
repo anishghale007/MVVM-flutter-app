@@ -11,7 +11,8 @@ import 'package:flutter_udemy/presentation/login/login_viewmodel.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final instance = GetIt.instance;
+final instance =
+    GetIt.instance; // instance = access to the Singleton instance of GetIt
 
 Future<void> initAppModule() async {
   final sharedPrefs = await SharedPreferences.getInstance();
@@ -33,7 +34,8 @@ Future<void> initAppModule() async {
 
   // app service client
   final dio = await instance<DioFactory>().getDio();
-  instance.registerLazySingleton<AppServiceClient>(() => AppServiceClient(dio));
+  instance.registerLazySingleton<AppServiceClient>(
+      () => AppServiceClient(dio)); // AppServiceClient(Dio dio)
 
   // remote data source
   instance.registerLazySingleton<RemoteDataSource>(
@@ -46,7 +48,7 @@ Future<void> initAppModule() async {
 
 initLoginModule() {
   // if any instance of LoginUseCase is not registered, it will initialize the following
-  if(!GetIt.I.isRegistered<LoginUseCase>()) {
+  if (!GetIt.I.isRegistered<LoginUseCase>()) {
     instance.registerFactory<LoginUseCase>(() => LoginUseCase(instance()));
     instance.registerFactory<LoginViewModel>(() => LoginViewModel(instance()));
   }
