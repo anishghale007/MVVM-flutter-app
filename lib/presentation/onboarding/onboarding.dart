@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_udemy/app/app_prefs.dart';
+import 'package:flutter_udemy/app/dependency_injection.dart';
 import 'package:flutter_udemy/domain/model/model.dart';
 import 'package:flutter_udemy/presentation/onboarding/onboarding_viewmodel.dart';
 import 'package:flutter_udemy/presentation/resources/assets_manager.dart';
@@ -19,9 +21,11 @@ class OnboardingView extends StatefulWidget {
 class _OnboardingViewState extends State<OnboardingView> {
   PageController _pageController = PageController(initialPage: 0);
   OnBoardingViewModel _viewModel = OnBoardingViewModel();
+  AppPreferences _appPreferences = instance<AppPreferences>();
 
   _bind() {
     _viewModel.start();
+    _appPreferences.setOnBoardingScreenView();
   }
 
   @override
